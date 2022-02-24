@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+     	<meta charset="UTF-8">
+	<title>FFDispatch</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+	<link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+     <style>
+        .nav-item{
+           min-width:0px;
+        }
+     </style>
+   </head>
+   <body>  
+      <div class="page-wrapper chiller-theme toggled">
+         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+         <i class="fas fa-bars"></i>
+         </a>
+         <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+               <div class="sidebar-brand">
+                  <div id="close-sidebar">
+                     <i class="fas fa-times"></i>
+                  </div>
+               </div>
+               <div class="sidebar-header">
+                  <div class="user-pic">
+                     <img class="img-responsive img-rounded" src="img/profile.svg"
+                        alt="User picture">
+                  </div>
+                  <div class="user-info">
+                     <span class="user-name">Jhon
+                     <strong>Smith</strong>
+                     </span>
+                     <span class="user-role">Administrator</span>
+                  </div>
+               </div>
+               <!-- sidebar-header  -->
+               <!-- sidebar-search  -->
+               <div class="sidebar-menu">
+                  <ul>
+                     <li class="header-menu">
+                        <span>HOME</span>
+                     </li>
+                     <li >
+                        <a href="#">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="product.html">
+                           <i class="fa fa-life-ring" ></i>
+                        <span>Product</span>
+                        </a>
+                         <!-- <div class="sidebar-submenu">
+                           <ul>
+                             <li>
+                               <a href="#">Products
+                           
+                               </a>
+                             </li>
+                             <li>
+                               <a href="#">Orders</a>
+                             </li>
+                             <li>
+                               <a href="#">Credit cart</a>
+                             </li>
+                           </ul>
+                           </div> 
+                     </li> -->
+                     <li>
+                        <a href="order.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Orders</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                        <span>Shipment</span>
+                        </a>
+                     </li>
+                     <li class="header-menu">
+                        <span>MANAGEMENT</span>
+                     </li>
+                     <li class="sidebar-dropdown">
+                        <a href="#">
+                        <i class="fa fa-cog"></i>
+                        <span>Settings</span>
+                        </a>
+                         <div class="sidebar-submenu">
+                           <ul>
+                             <li>
+                                 <a href="user-list.html">
+                                <i class="ri-user-line"></i>
+                                 <span>Users</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-map-pin-line"></i>
+                                 <span>Locations</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="drivers.html">
+                                    <i class="ri-steering-line"></i>
+                                 <span>Drivers</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-account-box-line"></i>
+                                 <span>Accounting</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-printer-line"></i>
+                                 <span>Integration</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-creative-commons-zero-line"></i>
+                                 <span>Branding</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li >
+                        <a href="customer.html">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>Customers</span>
+                        </a>
+                     </li>
+                     <li class="header-menu">
+                        <span>SUPPORT</span>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>Contact</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer py-2">
+               <a href="#">
+               <span>Logout</span>
+               </a>
+               <a href="login.html">
+               <i class="fa fa-power-off"></i>
+               </a>
+            </div>
+         </nav>
+         <!-- sidebar-wrapper  -->
+         
+         <!--header-->
+         <header class="header py-3">
+      <a href="index.html"><img class="mx-auto d-flex justify-content-center" src="img/logo.png" alt="main-logo"></a> 
+       </header>
+       <main class="page-content">
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="location.html">Location</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add New Location</li>
+            </ol>
+          </nav>       
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="page-content-card">
+                     <div class="tabbar-content">
+                        <div>
+                           <!-- START TABS DIV -->
+                           <div class="tabbable-responsive">
+                              <div class="tabbable">
+                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                       <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">General</a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">Bin</a>
+                                    </li>
+                                    <li class="nav-item">
+                                       <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">Delivery Setting</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card-body ">
+                           <div class="tab-content">
+                              <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                                 <p class="card-text"> 
+                                 <div class="main-user">
+                                    <form class="form-body forma text-left">
+                                       <div class="row">
+                                          <div class="col-md-6">                                         
+                                             <div class="form-group">
+                                                <label for="text">Product Name</label>
+                                                <input type="text" name="text" id="name">
+                                             </div>                                          
+                                       </div>
+                                       <div class="col-md-6">                                    
+                                          <div class="form-group">
+                                             <label for="text">
+                                                State/Province</label>
+                                             <input type="text" name="text" id="name">
+                                          </div>                                          
+                                    </div>
+                                    <div class="col-md-6">                                    
+                                       <div class="form-group">
+                                          <label for="text">
+                                             Address</label>
+                                          <input type="text" name="text" id="name">
+                                          <input type="text" name="text" id="name">
+                                       </div>                                          
+                                 </div>
+                                 <div class="col-md-6">                                    
+                                    <div class="form-group">
+                                       <label for="text">
+                                          Address</label>
+                                       <input type="text" name="text" id="name">
+                                                                      </div>  
+                                                                      <select>
+                                                                        <option selected value="0">Categorize</option>
+                                                                        <option value="1">No Wrapper</option>
+                                                                        <option value="2">No JS</option>
+                                                                        <option value="3">Nice!</option>
+                                                                     </select>                                        
+                              </div>
+                              <div class="col-md-6">                                    
+                                 <div class="form-group">
+                                    <label for="text">
+                                       City/Suburb</label>
+                                    <input type="text" name="text" id="name">
+                                  
+                                 </div>                                          
+                           </div>   
+                           <div class="col-md-6">                                    
+                              <div class="form-group">
+                                 <label for="text">
+                                    Description</label>
+                                 <input type="text" name="text" id="name">
+                               
+                              </div>                                          
+                        </div>           
+                                   </div>
+                                 <div class="d-flex justify-content-center">
+                                          <button class="user-btn mx-auto">
+                                             <!-- <svg class="svg-inline--fa fa-user-plus fa-w-20 add" aria-hidden="true" data-prefix="fa" data-icon="user-plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="">
+                                                <path fill="currentColor" d="M224 32c77.32 0 140 62.68 140 140s-62.68 140-140 140S84 249.32 84 172 146.68 32 224 32zm160.373 292.093l-62.399-15.6c-65.557 47.154-145.021 36.631-195.948 0l-62.399 15.6C26.233 333.442 0 367.04 0 405.585V438c0 23.196 18.804 42 42 42h364c23.196 0 42-18.804 42-42v-32.415c0-38.545-26.233-72.143-63.627-81.492zM628 224.889h-68.889V156c0-6.627-5.373-12-12-12h-38.222c-6.627 0-12 5.373-12 12l-.002 68.887-68.887.002c-6.627 0-12 5.373-12 12v38.222c0 6.627 5.373 12 12 12l68.887.002.002 68.887c0 6.627 5.373 12 12 12h38.222c6.627 0 12-5.373 12-12l.002-68.887 68.887-.002c6.627 0 12-5.373 12-12v-38.222c0-6.627-5.373-12-12-12z"></path>
+                                             </svg> -->
+                                             <!-- <i class="fa fa-user-plus add"></i> --><a href="">Add </a>
+                                          </button>
+                                          <!-- <p class="text">Click here to add new product</p> -->
+                                       </div>
+                                    </form>
+                                 </div>
+                                 </p>
+                              </div>
+                              <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+                                 <p class="card-text">  
+                                 <div class="user-top-btn main-btn">
+                                    <div class="d-flex justify-content-end mb-4">
+                                       <button class="product-top-btn bar-butt"><a href="#">Add New Bin Location                                       
+                                       </a></button>
+                                    </div>
+                                 </div>
+                                 <table id="example" class="table table-hover responsive nowrap" style="width:100%">
+                                    <thead>
+                                       <tr>
+                                          <th></th>
+                                          <th>BIN NAME</th>                                         
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <label class="contain">
+                                             <input type="checkbox" checked>
+                                             <span class="checkmark"></span>
+                                             </label>
+                                          </td>
+                                          <td>ABC</td>                                        
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 </p>
+                              </div>
+                              <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">                               
+                                 <p class="card-text">   
+                                 <div class="d-flex justify-content-end mb-4">
+                                  
+                                    <button class="product-top-btn bar-butt"><a href="#"  data-toggle="modal" data-target="#postCodeModal">Add Post Code</a></button>
+                                 </div>
+                                 <table id="example" class="table table-hover responsive nowrap" style="width:100%">
+                                    <thead>
+                                       <tr>
+                                          <th></th>
+                                          <th>POSTCODE AREA
+                                          </th>                                         
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <label class="contain">
+                                             <input type="checkbox" checked>
+                                             <span class="checkmark"></span>
+                                             </label>
+                                          </td>
+                                          <td>ABC</td>                                        
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 </p>
+                              </div>                            
+                           </div>
+                           <!-- END TABS DIV -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+                  <!--start modal1-->
+        <div id="postCodeModal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
+         <div class="modal-dialog">
+             <!-- Modal content-->
+             <div class="modal-content">
+                 <div class="row">
+                     <!--start mainLog-->
+                     <div class="col-md-12 text-center mx-auto" id="secLogin">
+                         <h4 class="titModal">Add New Postcode</h4>
+                         <form class="forma form-body text-left">
+                             <div class="form-group to-mid mx-auto">
+                                 <label class="text-left ">Enter new barcode here</label>
+                                 <input type="email " class="form-control " placeholder=" " required=" ">
+                             </div>
+                             <div class="form-group text-center">
+                                 <button class="product-top-btn bar-butt "><a href="# ">Add PostCode</a></button>
+                                 <button class="d-block cancel d-flex justify-content-center "><a href="# "></a>cancel</button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!--end Modal1-->
+      </main>
+         <!-- page-content" -->
+      </div>
+      <!-- page-wrapper -->
+      <!-- partial -->     
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script><script  src="./js/script.js"></script>
+   </body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FFDispatch</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+  <link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <style>
+    .user-top-btn select {
+      height: 40px;
+    }
+
+    label {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper chiller-theme toggled">
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand d-flex justify-content-between align-item-center">
+          <div class="sidebar-header">
+            <a href="route-management.html"><img src="img/logo.png" alt="main-logo"></a>
+          </div>
+          <!-- <div id="close-sidebar">
+               <i class="fas fa-times"></i>
+            </div>
+        -->
+        </div>
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>HOME</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="ri-dashboard-line side-icon" aria-hidden="true"></i>
+                <span>Dashboard</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="route-management.html">
+                      <i class="ri-route-fill side-icon"></i>
+                      <span>Route Management</span>
+                    </a>
+                  </li>
+
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="product.html">
+                <i class="ri-archive-line side-icon"></i>
+                <span>Product</span>
+              </a>
+
+            </li>
+            <li>
+              <a href="order.html">
+                <i class="ri-shopping-bag-3-line side-icon"></i>
+                <span class="text-white">Orders</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="ri-truck-line side-icon"></i>
+                <span>Shipment</span>
+              </a>
+            </li>
+            <li class="header-menu">
+              <span>MANAGEMENT</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class="ri-settings-5-line side-icon"></i>
+                <span>Settings</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="ri-user-line side-icon"></i>
+                      <span>Users</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ri-gps-line side-icon"></i>
+                      <span>Locations</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="drivers.html">
+                      <i class="ri-steering-2-line side-icon"></i>
+                      <span>Drivers</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ri-account-box-line side-icon"></i>
+                      <span>Accounting</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ri-shield-cross-line side-icon"></i>
+                      <span>Integration</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="ri-camera-lens-line side-icon"></i>
+                      <span>Branding</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="customer.html">
+                <i class="ri-group-line side-icon"></i>
+                <span >Customers</span>
+              </a>
+            </li>
+            <li class="header-menu">
+              <span>SUPPORT</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class="ri-phone-line side-icon"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+      <div class="sidebar-footer py-2">
+        <a href="#"> <span>Logout</span> </a>
+        <a href="login.html"> <i class="fa fa-power-off"></i> </a>
+      </div>
+    </nav>
+    <!-- sidebar -->
+    <!--header-->
+    <header class="header py-3 d-flex justify-content-between text-white px-4 align-item-center">
+      <div>
+        <h1 class="mb-0">Order Details</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="route-management.html">Dashboard</a></li>
+            <!-- <li class="breadcrumb-item"><a href="order.html">Order</a></li> -->
+            <li class="breadcrumb-item" aria-current="page"><a href="order.html">Order</a> </li>
+            <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="sidebar-header d-flex">
+        <div class="user-pic"> <img class="img-responsive img-rounded" src="img/profile.svg" alt="User picture"> </div>
+        <div class="user-info ml-3 d-flex">
+          <div> <span class="user-name">Jhon
+              <strong>Smith</strong>
+            </span>
+            <br> <span class="user-role">Administrator</span>
+          </div>
+          <div class="dropdown"> <span class="caret dropdown-toggle ml-3" id="menu1" data-toggle="dropdown"></span>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-2" href="#"><i class="fa fa-times-circle-o"
+                    aria-hidden="true"></i>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="order.html">Order</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Order Details</li>
+        </ol>
+      </nav>
+      <div class="container-fluid">
+        <div class="row page-content-card mx-2">
+          <div class="col-md-8 mb-3">
+            <h5>Order Details</h5>
+            <div class="row">
+              <div class="col-md-6 border-righ">
+                <div class="order-detail">
+
+                  <!-- <h5 class="bolder">Order Details</h5> -->
+                  <div class="order_grid order_ name">
+                    <p class="order-sidebar">Name</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content ">Emma</p>
+                  </div>
+                  <div class="order_grid order_ email">
+                    <p class="order-sidebar">Email</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content ">Emma@gmail.com</p>
+                  </div>
+                  <div class="order_grid order_ phone">
+                    <p class="order-sidebar">Phone</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content ">+445568393758</p>
+                  </div>
+                  <div class="order_grid order_ address">
+                    <p class="order-sidebar">Shipping Address</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content">1Stopgate Ln,Liverpool Merseysid,E
+                    </p>
+                  </div>
+                  <div class="order_grid order_ created ">
+                    <p class="order-sidebar">Order Created At</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content ">Fri,31 Dec 2021, 12 43 AM
+                    </p>
+                  </div>
+                  <div class="order_grid order_ id ">
+                    <p class="order-sidebar">Order Id</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content ">235666985
+                    </p>
+                  </div>
+                  <div class="order_grid order_ timing">
+                    <p class="order-sidebar">Timeslot</p>
+                    <p class="order-content ">:</p>
+                    <p class="order-content ">02 00 PM - 04 00 PM
+                    </p>
+                  </div>
+                  <div class="order_grid order_ status ">
+                    <p class="order-sidebar">Shipping Status</p>
+                    <p class="order-content ">:</p>
+                    <p class="shipping-status-color">Active
+                    </p>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="payment-status-font">
+                  <div class="payment_status">
+                    <label for="">Payment Status</label>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input ml-4 " type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                      <label class="form-check-label" for="inlineRadio1">Paid</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label" for="inlineRadio2">Unpaid</label>
+                    </div>
+
+                  </div>
+                  <div class="id_required mt-1 ">
+                    <label for="">Id Required</label>
+                    <div class="form-check form-check-inline  ml-5">
+                      <input class="form-check-input ml-1" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                      <label class="form-check-label text-success " for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input ml-2" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                      <label class="form-check-label text-danger" for="inlineRadio2">No</label>
+                    </div>
+
+                  </div>
+                  <div class="location d-flex mt-1">
+                    <label for="">Location</label>
+                    <select class="form-select ml-5 bg-light border-0" aria-label="Default select example">
+                      <option selected>Please Select Location</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+
+                  <div class="delivery_assign mt-3">
+                    <hr>
+                    <p class="bold">Delivery Assign To:</p>
+                    <div class="map_delivery_detail">
+                      <p>Clare Smith</p>
+                      <p>View Profile</p>
+
+                    </div>
+                    <div class="map_image">
+                      <img src="..." alt="">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <h5 class="order-status">Delivery Status</h5>
+            <div class="d-flex pl-4 mt-5">
+              <div class="green-slider">
+                <div class="slider-fill">
+
+                </div>
+              </div>
+              <div class="ml-4">
+                <div>
+
+                  <h6 class="order-header">Order Created</h6>
+                  <p class="order-paragraph">Fri,31,Dec 2021, 12:43AM</p>
+                </div>
+                <div>
+                  <h6 class="order-header">Payment</h6>
+                  <p class="order-paragraph">Paid</p>
+                </div>
+                <div>
+                  <h6 class="order-header">Out For Delivery</h6>
+                  <p class="order-paragraph">on the way</p>
+                </div>
+                <div>
+                  <h6 class="order-header">Order Delivery</h6>
+                  <p class="order-paragraph mb-0">Expected Delivery: Sun,2,Jan,2022</p>
+                  <p class="order-paragraph text-right">02:00PM-04:00AM</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="mt-3 mx-3">
+              <p class="font-weight-bold">Product details</p>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">SKU</th>
+                  <th scope="col">Product Name</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Discount</th>
+                  <th scope="col">Total Price</th>
+                </tr>
+              </thead>
+              <tbody> 
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+                <tr>
+                  <th scope="row">CK5568</th>
+                  <td>Coca Cola</td>
+                  <td>3</td>
+                  <td class="text-success">600</td>
+                  <td class="text-danger">£20</td>
+                  <td>580</td>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-12">
+            <hr class="new1">
+            <div class="order-grid-money order_ total_amount d-flex justify-content-end pr-5 mr-5">
+              <div class="" style="width:26% ">
+                <div class="d-flex justify-content-between ">
+                  <div class="common-width">
+                    <span>Subtotal</span>
+                    <span>:</span>
+                  </div>
+                  <div>
+                    <span>£3264</span>
+                  </div>
+
+                </div>
+                <div class="d-flex justify-content-between text-danger">
+                  <div class="common-width">
+                    <span>Discount</span>
+                    <span>:</span>
+                  </div>
+                  <div>
+                    <span>£20.4</span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div class="common-width">
+                    <span>Vat Amount</span>
+                    <span>:</span>
+                  </div>
+                  <div>
+                    <span>£30.64</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <hr class="new1">
+            <div class=" total_amount d-flex justify-content-end pr-5 mr-5">
+              <div class=" ">
+
+                <p class="pr-1">Total Payable Amount <span class="p-3">:</span><span>£ 3264</span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </main>
+    <!-- page-content" -->
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+  <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+  <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+  <script src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

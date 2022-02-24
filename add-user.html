@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+     	<meta charset="UTF-8">
+	<title>FFDispatch</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+	<link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+     
+   </head>
+   <body>
+    
+     <!-- Sidebar -->
+     <div class="page-wrapper chiller-theme toggled">
+    <!-- Sidebar -->
+		<nav id="sidebar" class="sidebar-wrapper">
+			<div class="sidebar-content">
+				<div class="sidebar-brand d-flex justify-content-between align-item-center">
+					<div class="sidebar-header">
+						<a href="route-management.html"><img src="img/logo.png" alt="main-logo"></a>
+					</div>
+				</div>
+				<div class="sidebar-menu">
+					<ul>
+					   <li class="header-menu">
+						  <span>HOME</span>
+					   </li>
+						 <li class="sidebar-dropdown">
+						  <a href="#">
+							 <i class="ri-dashboard-line side-icon" aria-hidden="true"></i>
+						  <span>Dashboard</span>
+						  </a>
+						   <div class="sidebar-submenu">
+							 <ul>
+								<li>
+								   <a href="route-management.html">
+									  <i class="ri-route-fill side-icon"></i>
+								   <span>Route Management</span>
+								   </a>
+								</li>
+							  
+							 </ul>
+						  </div>
+					   </li>
+					   <li>
+						  <a href="product.html">
+							 <i class="ri-archive-line side-icon"></i>
+						  <span>Product</span>
+						  </a>
+					  
+					   </li>
+					   <li>
+						  <a href="order.html">
+							 <i class="ri-shopping-bag-3-line side-icon"></i>
+						  <span>Orders</span>
+						  </a>
+					   </li>
+					   <li>
+						  <a href="#">
+							 <i class="ri-truck-line side-icon"></i>
+						  <span>Shipment</span>
+						  </a>
+					   </li>
+					   <li class="header-menu">
+						  <span>MANAGEMENT</span>
+					   </li>
+					   <li class="sidebar-dropdown">
+						  <a href="#">
+							 <i class="ri-settings-5-line side-icon"></i>
+						  <span>Settings</span>
+						  </a>
+						   <div class="sidebar-submenu">
+							 <ul>
+								<li>
+								   <a href="user-list.html">
+									  <i class="ri-user-line side-icon"></i>
+								   <span>Users</span>
+								   </a>
+								</li>
+								<li>
+								   <a href="location.html">
+									  <i class="ri-gps-line side-icon"></i>
+								   <span>Locations</span>
+								   </a>
+								</li>
+								<li>
+								   <a href="drivers.html">
+									  <i class="ri-steering-2-line side-icon"></i>
+								   <span>Drivers</span>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+									  <i class="ri-account-box-line side-icon"></i>
+								   <span>Accounting</span>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+									  <i class="ri-shield-cross-line side-icon"></i>
+								   <span>Integration</span>
+								   </a>
+								</li>
+								<li>
+								   <a href="#">
+									  <i class="ri-camera-lens-line side-icon"></i>
+								   <span>Branding</span>
+								   </a>
+								</li>
+							 </ul>
+						  </div>
+					   </li>
+					   <li >
+						  <a href="customer.html">
+							 <i class="ri-group-line side-icon"></i>
+						  <span>Customers</span>
+						  </a>
+					   </li>
+					   <li class="header-menu">
+						  <span>SUPPORT</span>
+					   </li>
+					   <li>
+						  <a href="#">
+							 <i class="ri-phone-line side-icon"></i>
+						  <span>Contact</span>
+						  </a>
+					   </li>
+					</ul>
+				 </div>
+				<!-- sidebar-menu  -->
+			</div>
+			<!-- sidebar-content  -->
+			<div class="sidebar-footer py-2">
+				<a href="#"> <span>Logout</span> </a>
+				<a href="login.html"> <i class="fa fa-power-off"></i> </a>
+			</div>
+		</nav>
+		<!-- sidebar -->
+		<!--header-->
+		<header class="header py-3 d-flex justify-content-between text-white px-4 align-item-center">
+			<div>
+				<h1 class="mb-0">Orders</h1>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="route-management.html">Dashboard</a></li>
+						<!-- <li class="breadcrumb-item"><a href="order.html">Order</a></li> -->
+						<li class="breadcrumb-item active" aria-current="page">Orders</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="sidebar-header d-flex">
+				<div class="user-pic"> <img class="img-responsive img-rounded" src="img/profile.svg" alt="User picture"> </div>
+				<div class="user-info ml-3 d-flex">
+					<div> <span class="user-name">Jhon
+                        <strong>Smith</strong>
+                        </span>
+						<br> <span class="user-role">Administrator</span> </div>
+					<div class="dropdown"> <span class="caret dropdown-toggle ml-3" id="menu1" data-toggle="dropdown"></span>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-2" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i>Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+         <main class="page-content">  
+            <nav aria-label="breadcrumb">
+               <ol class="breadcrumb">
+                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                 <li class="breadcrumb-item"><a href="product.html">User</a></li>
+
+               </ol>
+             </nav>  
+                 
+            <div class="container-fluid">
+               <div class="row">
+                  
+                  <div class="col-md-12">
+                      <div class="add_user">
+                     <div class="page-content-card">
+                        <div class="tabbable-responsive">
+                           <div class="tabbable">
+                              <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+                                 <li class="nav-item">
+                                    <a class="nav-link active" id="first-tab" data-toggle="tab" href="" role="tab" aria-controls="first" aria-selected="true">Users</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" id="second-tab" data-toggle="tab" href="" role="tab" aria-controls="second" aria-selected="false">Groups</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" id="third-tab" data-toggle="tab" href="" role="tab" aria-controls="third" aria-selected="false">Categories</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" id="fourth-tab" data-toggle="tab" href="" role="tab" aria-controls="fourth" aria-selected="false">Locations</a>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" id="fifth-tab" data-toggle="tab" href="" role="tab" aria-controls="fifth" aria-selected="false">Brands</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <h4 class="text-center mt-5">Sorry, you have not added any user</h4>
+                        <img src="/img/user-empty.png" alt="" class="user-empty-img mt-5" height="282px" width="382px">
+                        <button class="add_user_button mt-5"><i class="fa fa-user-plus add"></i><a href="/add-new-user.html"></a>&nbsp;&nbsp;&nbsp;ADD NEW USER</button>
+                        <p class="add-new-user text-center mt-1">Click here to add new User</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+              
+            </div>
+         </main>
+         <!-- page-content" -->
+      </div>
+      <!-- page-wrapper -->
+      <!-- partial -->
+     
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script><script  src="./js/script.js"></script>
+   </body>
+</html>

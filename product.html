@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FFDispatch</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+	<link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<style>
+	table tbody tr td label {
+		margin-bottom: -3px;
+	}
+	</style>
+</head>
+
+<body>
+	<div class="page-wrapper chiller-theme toggled">
+		<!-- Sidebar -->
+		<nav id="sidebar" class="sidebar-wrapper">
+			<div class="sidebar-content">
+				<div class="sidebar-brand d-flex justify-content-between align-item-center">
+					<div class="sidebar-header">
+						<a href="route-management.html"><img src="img/logo.png" alt="main-logo"></a>
+					</div>
+					<!-- <div id="close-sidebar">
+				 <i class="fas fa-times"></i>
+			  </div>
+			  --></div>
+				<div class="sidebar-menu">
+					<ul>
+						<li class="header-menu"> <span>HOME</span> </li>
+						<li class="sidebar-dropdown">
+							<a href="#"> <i class="ri-dashboard-line side-icon" aria-hidden="true"></i> <span>Dashboard</span> </a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="route-management.html"> <i class="ri-route-fill side-icon"></i> <span>Route Management</span> </a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="product.html"> <i class="ri-archive-line side-icon"></i> <span class="text-white">Product</span> </a>
+						</li>
+						<li>
+							<a href="order.html"> <i class="ri-shopping-bag-3-line side-icon"></i> <span>Orders</span> </a>
+						</li>
+						<li>
+							<a href="#"> <i class="ri-truck-line side-icon"></i> <span>Shipment</span> </a>
+						</li>
+						<li class="header-menu"> <span>MANAGEMENT</span> </li>
+						<li class="sidebar-dropdown">
+							<a href="#"> <i class="ri-settings-5-line side-icon"></i> <span>Settings</span> </a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#"> <i class="ri-user-line side-icon"></i> <span>Users</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-gps-line side-icon"></i> <span>Locations</span> </a>
+									</li>
+									<li>
+										<a href="drivers.html"> <i class="ri-steering-2-line side-icon"></i> <span>Drivers</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-account-box-line side-icon"></i> <span>Accounting</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-shield-cross-line side-icon"></i> <span>Integration</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-camera-lens-line side-icon"></i> <span>Branding</span> </a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="customer.html"> <i class="ri-group-line side-icon"></i> <span>Customers</span> </a>
+						</li>
+						<li class="header-menu"> <span>SUPPORT</span> </li>
+						<li>
+							<a href="#"> <i class="ri-phone-line side-icon"></i> <span>Contact</span> </a>
+						</li>
+					</ul>
+				</div>
+				<!-- sidebar-menu  -->
+			</div>
+			<!-- sidebar-content  -->
+			<div class="sidebar-footer py-2">
+				<a href="#"> <span>Logout</span> </a>
+				<a href="login.html"> <i class="fa fa-power-off"></i> </a>
+			</div>
+		</nav>
+		<!-- sidebar -->
+		<!--header-->
+		<header class="header py-3 d-flex justify-content-between text-white px-4 align-item-center">
+			<div>
+				<h1 class="mb-0">Products</h1>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="route-management.html">Dashboard</a></li>
+						<!-- <li class="breadcrumb-item"><a href="order.html">Order</a></li> -->
+						<li class="breadcrumb-item active" aria-current="page">Products</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="sidebar-header d-flex">
+				<div class="user-pic"> <img class="img-responsive img-rounded" src="img/profile.svg" alt="User picture"> </div>
+				<div class="user-info ml-3 d-flex">
+					<div> <span class="user-name">Jhon
+							<strong>Smith</strong>
+							</span>
+						<br> <span class="user-role">Administrator</span> </div>
+					<div class="dropdown"> <span class="caret dropdown-toggle ml-3" id="menu1" data-toggle="dropdown"></span>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-2" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i>Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page-content">
+			<div class="container-fluid p-0">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="product-top d-flex justify-content-between pb-4 pt-3 pl-4 pr-4">
+							<div class="d-flex">
+								<div class="dropdown">
+									<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Filter Tags <span class="caret"></span></button>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem Ipsum1</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem Ipsum1</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem Ipsum1</a></li>
+									</ul>
+								</div>
+								<input type="email" class="form-control input-form  ml-3 py-2" id="input1" placeholder="Search product name or SKU"> </div>
+							<div>
+								<button class="import-btn"><i class="fa fa-download mr-2" aria-hidden="true"></i>Import</button>
+								<button class="export-btn"><i class="fa fa-upload mr-2" aria-hidden="true"></i>Export</button>
+								<button class="product-top-btn bar-butt loc-butt ml-3"><a href="add-product.html"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Add New Product</a></button>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 d-flex justify-content-between product-middle pt-4 align-item-center ">
+						<div class="d-flex">
+							<div class="check-icon mr-4 ml-4">
+								<label class="contain">
+									<input type="checkbox"> <span class="checkmark"></span> </label>
+							</div>
+							<div class="delete-icon mt-2 mr-3"> <i class="fa fa-trash" aria-hidden="true"></i> </div>
+							<select class="mr-3 py-2 dropdown-select">
+								<option selected value="0">View All</option>
+								<option value="3">Nice!</option>
+							</select>
+							<select class="mr-3 py-2 dropdown-select">
+								<option selected value="0">Sort Newest First</option>
+								<option value="1">No Wrapper</option>
+							</select>
+						</div>
+						<div class="pr-4 right-text">
+							<p>Total Products:<span>958</span> </p>
+						</div>
+					</div>
+					<div class="col-md-12 product-middle">
+						<div class="page-content-card ml-4 mt-4 mr-4">
+							<div class="row py-2">
+								<div class="col-12">
+									<table id="myTable" class="table table-hover responsive nowrap mx-auto " style="width:100%">
+										<thead>
+											<tr>
+												<th></th>
+												<th data-orderable="false">Product Name</th>
+												<th data-orderable="false">SKU Code</th>
+												<th data-orderable="false">Unit</th>
+												<th data-orderable="false">Price (Inc. Tax)</th>
+												<th data-orderable="false">Type</th>
+												<th data-orderable="false">ID Required</th>
+												<th data-orderable="false">Last Supplier</th>
+												<th data-orderable="false">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<label class="contain">
+														<input type="checkbox" checked> <span class="checkmark"></span> </label>
+												</td>
+												<td>Coca Cola Classic 2L
+													<br><span class="stock">In Stock</span></td>
+												<td>CCC056</td>
+												<td>24</td>
+												<td>£ 1.99</td>
+												<td>Drink</td>
+												<td>Yes</td>
+												<td>Mehta LTD</td>
+												<td><i class="ri-edit-2-line"></i></td>
+											</tr>
+											<tr>
+												<td>
+													<label class="contain">
+														<input type="checkbox" > <span class="checkmark"></span> </label>
+												</td>
+												<td>Coca Cola Classic 2L
+													<br><span class="stock">In Stock</span></td>
+												<td>CCC056</td>
+												<td>24</td>
+												<td>£ 1.99</td>
+												<td>Drink</td>
+												<td>Yes</td>
+												<td>Mehta LTD</td>
+												<td><i class="ri-edit-2-line"></i></td>
+											</tr>
+											<tr>
+												<td>
+													<label class="contain">
+														<input type="checkbox" > <span class="checkmark"></span> </label>
+												</td>
+												<td>Coca Cola Classic 2L
+													<br><span class="stock">In Stock</span></td>
+												<td>CCC056</td>
+												<td>24</td>
+												<td>£ 1.99</td>
+												<td>Drink</td>
+												<td>Yes</td>
+												<td>Mehta LTD</td>
+												<td><i class="ri-edit-2-line"></i></td>
+											</tr>
+											<tr>
+												<td>
+													<label class="contain">
+														<input type="checkbox" > <span class="checkmark"></span> </label>
+												</td>
+												<td>Coca Cola Classic 2L
+													<br><span class="stock">In Stock</span></td>
+												<td>CCC056</td>
+												<td>24</td>
+												<td>£ 1.99</td>
+												<td>Drink</td>
+												<td>Yes</td>
+												<td>Mehta LTD</td>
+												<td><i class="ri-edit-2-line"></i></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- page-content" -->
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+	<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+	<script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+	<script src="./script.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

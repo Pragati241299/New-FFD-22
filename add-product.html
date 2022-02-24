@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FFDispatch</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+	<link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<style>
+	.user-top-btn select {
+		height: 40px;
+	}
+	
+	label {
+		margin-bottom: 0;
+	}
+	
+	.dropdown .btn {
+		border: 1px solid #d5d5d5;
+	}
+	/* .form-body {
+         padding: 0px 41px;
+         } */
+	</style>
+</head>
+
+<body>
+	<div class="page-wrapper chiller-theme toggled">
+		<!-- Sidebar -->
+		<nav id="sidebar" class="sidebar-wrapper">
+			<div class="sidebar-content">
+				<div class="sidebar-brand d-flex justify-content-between align-item-center">
+					<div class="sidebar-header">
+						<a href="route-management.html"><img src="img/logo.png" alt="main-logo"></a>
+					</div>
+					<!-- <div id="close-sidebar">
+                     <i class="fas fa-times"></i>
+                  </div>
+				  --></div>
+				<div class="sidebar-menu">
+					<ul>
+						<li class="header-menu"> <span>HOME</span> </li>
+						<li class="sidebar-dropdown">
+							<a href="#"> <i class="ri-dashboard-line side-icon" aria-hidden="true"></i> <span>Dashboard</span> </a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="route-management.html"> <i class="ri-route-fill side-icon"></i> <span>Route Management</span> </a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="product.html"> <i class="ri-archive-line side-icon"></i> <span class="text-white">Product</span> </a>
+						</li>
+						<li>
+							<a href="order.html"> <i class="ri-shopping-bag-3-line side-icon"></i> <span>Orders</span> </a>
+						</li>
+						<li>
+							<a href="#"> <i class="ri-truck-line side-icon"></i> <span>Shipment</span> </a>
+						</li>
+						<li class="header-menu"> <span>MANAGEMENT</span> </li>
+						<li class="sidebar-dropdown">
+							<a href="#"> <i class="ri-settings-5-line side-icon"></i> <span>Settings</span> </a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#"> <i class="ri-user-line side-icon"></i> <span>Users</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-gps-line side-icon"></i> <span>Locations</span> </a>
+									</li>
+									<li>
+										<a href="drivers.html"> <i class="ri-steering-2-line side-icon"></i> <span>Drivers</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-account-box-line side-icon"></i> <span>Accounting</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-shield-cross-line side-icon"></i> <span>Integration</span> </a>
+									</li>
+									<li>
+										<a href="#"> <i class="ri-camera-lens-line side-icon"></i> <span>Branding</span> </a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a href="customer.html"> <i class="ri-group-line side-icon"></i> <span>Customers</span> </a>
+						</li>
+						<li class="header-menu"> <span>SUPPORT</span> </li>
+						<li>
+							<a href="#"> <i class="ri-phone-line side-icon"></i> <span>Contact</span> </a>
+						</li>
+					</ul>
+				</div>
+				<!-- sidebar-menu  -->
+			</div>
+			<!-- sidebar-content  -->
+			<div class="sidebar-footer py-2">
+				<a href="#"> <span>Logout</span> </a>
+				<a href="login.html"> <i class="fa fa-power-off"></i> </a>
+			</div>
+		</nav>
+		<!-- sidebar -->
+		<!--header-->
+		<header class="header py-3 d-flex justify-content-between text-white px-4 align-item-center">
+			<div>
+				<h1 class="mb-0">Add New Product</h1>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="route-management.html">Dashboard</a></li>
+						<!-- <li class="breadcrumb-item"><a href="order.html">Order</a></li> -->
+						<li class="breadcrumb-item" aria-current="page"><a href="product.html">Products</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Add New Product</li>
+					</ol>
+				</nav>
+			</div>
+			<div class="sidebar-header d-flex">
+				<div class="user-pic"> <img class="img-responsive img-rounded" src="img/profile.svg" alt="User picture"> </div>
+				<div class="user-info ml-3 d-flex">
+					<div> <span class="user-name">Jhon
+							<strong>Smith</strong>
+							</span>
+						<br> <span class="user-role">Administrator</span> </div>
+					<div class="dropdown"> <span class="caret dropdown-toggle ml-3" id="menu1" data-toggle="dropdown"></span>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit Profile</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-2" href="#"><i class="fa fa-times-circle-o" aria-hidden="true"></i>Logout</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page-content">
+			<div class="d-flex pl-3 mt-3"> <span><i class="fa fa-arrow-left mr-2" aria-hidden="true"></i>Back</span> </div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="page-content-card">
+							<div class="tabbar-content">
+								<div>
+									<!-- START TABS DIV -->
+									<div class="tabbable-responsive">
+										<div class="tabbable">
+											<ul class="nav nav-tabs" id="myTab" role="tablist">
+												<li class="nav-item"> <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">General</a> </li>
+												<li class="nav-item"> <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">Barcode</a> </li>
+												<li class="nav-item"> <a class="nav-link" id="third-tab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">Stock & Location</a> </li>
+												<li class="nav-item"> <a class="nav-link" id="fourth-tab" data-toggle="tab" href="#fourth" role="tab" aria-controls="fourth" aria-selected="false">Dimension & Weight</a> </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="card-body ">
+									<div class="tab-content">
+										<!---first Tab-->
+										<div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+											<p class="card-text">
+												<div class="main-user">
+													<form class="form-body forma text-left">
+														<p>Product Details :</p>
+														<div class="row">
+															<div class="col-md-3">
+																<div class="form-group">
+																	<label for="text">SKU Code</label>
+																	<input type="text" name="text" id="name"> </div>
+															</div>
+															<div class="col-md-5">
+																<div class="form-group">
+																	<label for="text">Product Name</label>
+																	<input type="text" name="text" id="name"> </div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label for="text">Sales Tax</label>
+																	<input type="text" name="text" id="name"> </div>
+															</div>
+															<div class="col-md-4">
+																<div class="form-group">
+																	<label for="text">Tags</label>
+																	<input type="text" name="text" id="name"> </div>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between bottom-btn">
+															<div>
+																<button class="import-btn"><i class="fa fa-download mr-2" aria-hidden="true"></i>Import CSV</button>
+																</button>
+															</div>
+															<div>
+																<button class="cancel-btn mr-3">Cancel</button>
+																<button class="add-btn"><a href="product.html">Add</a></button>
+															</div>
+														</div>
+													</form>
+												</div>
+											</p>
+										</div>
+										<!---Second Tab-->
+										<div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+											<p class="card-text">
+												<div class="user-top-btn main-btn">
+													<div class="d-flex justify-content-between mb-4">
+														<div class="dropdown">
+															<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Category <span class="caret"></span></button>
+															<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+																<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem ipsum</a></li>
+																<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem ipsum</a></li>
+																<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem ipsum</a></li>
+															</ul>
+														</div>
+														<button class="product-top-btn bar-butt loc-butt ml-3"><a href="#" data-toggle="modal" data-target="#BarcodeModal"><i class="fa fa-barcode mr-2" aria-hidden="true"></i>Add New Barcode</a></button>
+														</a>
+														</button>
+													</div>
+												</div>
+												<table id="myTable" class="table  responsive nowrap" style="width:100%">
+													<thead>
+														<tr>
+															<th data-orderable="false"></th>
+															<th data-orderable="false">Barcode</th>
+															<th data-orderable="false">Units In Case</th>
+															<th data-orderable="false">Actions</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<label class="contain">
+																	<input type="checkbox"> <span class="checkmark"></span> </label>
+															</td>
+															<td>112458 879562</td>
+															<td>112458 879562</td>
+															<td><div class="d-flex"><i class="ri-delete-bin-5-line mr-3"></i><i class="ri-edit-2-line"></i></div></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</p>
+										</div>
+										<!---Third Tab-->
+										<div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-tab">
+											<p class="card-text">
+												<div class="user-top-btn main-btn">
+													<div class="d-flex justify-content-between mb-4">
+														<div class="dropdown">
+															<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Category <span class="caret"></span></button>
+															<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+																<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem ipsum</a></li>
+																<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem ipsum</a></li>
+																<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lorem ipsum</a></li>
+															</ul>
+														</div>
+														<button class="product-top-btn bar-butt loc-butt ml-3"><a href="#" data-toggle="modal" data-target="#AddLocationModal"><i class="fa fa-compass mr-2" aria-hidden="true"></i>Add New Location</a></button>
+														</a>
+														</button>
+													</div>
+												</div>
+												<table id="myTablee" class="table  responsive nowrap" style="width:100%">
+													<thead>
+														<tr>
+															<th data-orderable="false"></th>
+															<th data-orderable="false">Location</th>
+															<th data-orderable="false">Bin</th>
+															<th data-orderable="false">Expiry Date</th>
+															<th data-orderable="false">Stock Value</th>
+															<th data-orderable="false">On Hand</th>
+															<th data-orderable="false">Available</th>
+															<th data-orderable="false">On Order</th>
+															<th data-orderable="false">Available</th>
+															<th data-orderable="false">Transist</th>
+															<th data-orderable="false">Allocated</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																<label class="contain">
+																	<input type="checkbox"> <span class="checkmark"></span> </label>
+															</td>
+															<td>Warehouse B41</td>
+															<td>Warehouse B41</td>
+															<td>12/02/2030</td>
+															<td>2400</td>
+															<td>40</td>
+															<td><span class="text-primary">2000</span></td>
+															<td>400</td>
+															<td><span class="text-success">2000</span></td>
+															<td>800</td>
+															<td>800</td>
+														</tr>
+														<tr>
+															<td>
+																<label class="contain">
+																	<input type="checkbox"> <span class="checkmark"></span> </label>
+															</td>
+															<td>Warehouse B41</td>
+															<td>Warehouse B41</td>
+															<td>12/02/2030</td>
+															<td>2400</td>
+															<td>40</td>
+															<td><span class="text-primary">2000</span></td>
+															<td>400</td>
+															<td><span class="text-success">2000</span></td>
+															<td>800</td>
+															<td>800</td>
+														</tr>
+														<tr>
+															<td>
+																<label class="contain">
+																	<input type="checkbox"> <span class="checkmark"></span> </label>
+															</td>
+															<td>Warehouse B41</td>
+															<td>Warehouse B41</td>
+															<td>12/02/2030</td>
+															<td>2400</td>
+															<td>40</td>
+															<td><span class="text-primary">2000</span></td>
+															<td>400</td>
+															<td><span class="text-success">2000</span></td>
+															<td>800</td>
+															<td>800</td>
+														</tr>
+														<tr>
+															<td>
+																<label class="contain">
+																	<input type="checkbox"> <span class="checkmark"></span> </label>
+															</td>
+															<td>Warehouse B41</td>
+															<td>Warehouse B41</td>
+															<td>12/02/2030</td>
+															<td>2400</td>
+															<td>40</td>
+															<td><span class="text-primary">2000</span></td>
+															<td>400</td>
+															<td><span class="text-success">2000</span></td>
+															<td>800</td>
+															<td>800</td>
+														</tr>
+													</tbody>
+												</table>
+											</p>
+										</div>
+										<!---Fourth Tab-->
+										<div class="tab-pane fade" id="fourth" role="tabpanel" aria-labelledby="fourth-tab">
+											<p class="card-text">
+												<form class="form-body forma text-left">
+													<p>Product Dimension (In mm) :</p>
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-group">
+																<label for="text">Height</label>
+																<input type="text" name="text" id="name"> </div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label for="text">Width</label>
+																<input type="text" name="text" id="name"> </div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label for="text">Length</label>
+																<input type="text" name="text" id="name"> </div>
+														</div>
+														<div class="col-md-4">
+															<p class="mt-3">Weight (In kg):</p>
+															<div class="form-group">
+																<label for="text">Kilogram</label>
+																<input type="text" name="text" id="name"> </div>
+														</div>
+													</div>
+													<div class="d-flex justify-content-end bottom-btn">
+														<div>
+															<button class="add-btn">Save</button>
+														</div>
+													</div>
+												</form>
+											</p>
+										</div>
+									</div>
+									<!-- END TABS DIV -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- page-content" -->
+		<!--start modal1-->
+		<div id="BarcodeModal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="row">
+						<!--start mainLog-->
+						<div class="col-md-12 text-center " id="secLogin">
+							<h4 class="titModal">Add New barcode</h4>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="label-text">Units In Case</label>
+										<input type="email " class="form-control mx-auto inputt"> </div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="label-text">Barcode</label>
+										<input type="email " class="form-control mx-auto inputt" placeholder="XXXXXX - XXXXXX"> </div>
+								</div>
+								<div class="col-md-12">
+									<div class="bottom-btn mb-4 mt-4">
+										<button class="add-button">Add Barcode</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end Modal1-->
+		<!--start modal2-->
+		<div id="EditBarcodeModal " class="modal fade " role="dialog " aria-hidden="true " style="display: none; ">
+			<div class="modal-dialog ">
+				<!-- Modal content-->
+				<div class="modal-content ">
+					<div class="row ">
+						<!--start mainLog-->
+						<div class="col-md-12 text-center mx-auto" id="secLogin ">
+							<h4 class="titModal ">Edit Barcode</h4>
+							<div class="text-center py-3">
+								<div class="form-group ">
+									<label class="text-left ">Edit your barcode here</label>
+									<input type="email " class="form-control " placeholder=" " required=" "> </div>
+								<div class="form-group ">
+									<button class="product-top-btn bar-butt "><a href="# ">Save Changes</a></button>
+									<button class="d-block cancel d-flex justify-content-center ">
+										<a href="# "></a>cancel</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--end Modal2-->
+		<!--start modal-->
+		<div id="AddLocationModal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="row">
+						<!--start mainLog-->
+						<div class="col-md-12 text-center " id="secLogin">
+							<h4 class="titModal">Add New Location</h4>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="label-text">Warehouse</label>
+										<input type="email " class="form-control mx-auto inputt"> </div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label class="label-text">Warehouse</label>
+										<input type="email " class="form-control mx-auto inputt"> </div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="bottom-btn mb-4 mt-3">
+									<button class="add-button">Add Barcode</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end Modal-->
+	</div>
+	<!-- <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script> -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+	<script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+	<script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script>
+	<script src="./script.js"></script>
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script> -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

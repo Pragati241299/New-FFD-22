@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+     	<meta charset="UTF-8">
+	<title>FFDispatch</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+	<link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+	<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+     
+   </head>
+   <body>
+       <!-- Sidebar -->
+       <div class="page-wrapper chiller-theme toggled">
+         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+         <i class="fas fa-bars"></i>
+         </a>
+         <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+               <div class="sidebar-brand">
+                  <div id="close-sidebar">
+                     <i class="fas fa-times"></i>
+                  </div>
+               </div>
+               <div class="sidebar-header">
+                  <div class="user-pic">
+                     <img class="img-responsive img-rounded" src="img/profile.svg"
+                        alt="User picture">
+                  </div>
+                  <div class="user-info">
+                     <span class="user-name">Jhon
+                     <strong>Smith</strong>
+                     </span>
+                     <span class="user-role">Administrator</span>
+                  </div>
+               </div>
+               <!-- sidebar-header  -->
+               <!-- sidebar-search  -->
+               <div class="sidebar-menu">
+                  <ul>
+                     <li class="header-menu">
+                        <span>HOME</span>
+                     </li>
+                     <li >
+                        <a href="index.html">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span>Dashboard</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="product.html">
+                           <i class="fa fa-life-ring" ></i>
+                        <span>Product</span>
+                        </a>
+                        <!-- <div class="sidebar-submenu">
+                           <ul>
+                             <li>
+                               <a href="#">Products
+                           
+                               </a>
+                             </li>
+                             <li>
+                               <a href="#">Orders</a>
+                             </li>
+                             <li>
+                               <a href="#">Credit cart</a>
+                             </li>
+                           </ul>
+                           </div> -->
+                     </li>
+                     <li>
+                        <a href="order.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Orders</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-truck" aria-hidden="true"></i>
+                        <span>Shipment</span>
+                        </a>
+                     </li>
+                     <li class="header-menu">
+                        <span>MANAGEMENT</span>
+                     </li>
+                     <li class="sidebar-dropdown">
+                        <a href="#">
+                        <i class="fa fa-cog"></i>
+                        <span>Settings</span>
+                        </a>
+                         <div class="sidebar-submenu">
+                           <ul>
+                              <li>
+                                 <a href="user-list.html">
+                                <i class="ri-user-line"></i>
+                                 <span>Users</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="location.html">
+                                    <i class="ri-map-pin-line"></i>
+                                 <span>Locations</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="drivers.html">
+                                    <i class="ri-steering-line"></i>
+                                 <span>Drivers</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-account-box-line"></i>
+                                 <span>Accounting</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-printer-line"></i>
+                                 <span>Integration</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="ri-creative-commons-zero-line"></i>
+                                 <span>Branding</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li >
+                        <a href="customer.html">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <span>Customers</span>
+                        </a>
+                     </li>
+                     <li class="header-menu">
+                        <span>SUPPORT</span>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>Contact</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- sidebar-menu  -->
+            </div>
+            <!-- sidebar-content  -->
+            <div class="sidebar-footer py-2">
+               <a href="#">
+               <span>Logout</span>
+               </a>
+               <a href="login.html">
+               <i class="fa fa-power-off"></i>
+               </a>
+            </div>
+         </nav>
+         <!-- sidebar-wrapper  -->
+         <!-- sidebar-wrapper  -->
+         
+         <!--header-->
+         <header class="header py-3">
+      <a href="index.html"><img class="mx-auto d-flex justify-content-center" src="img/logo.png" alt="main-logo"></a> 
+       </header>
+         <main class="page-content">   
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                  <li class="breadcrumb-item"><a href="product.html">Group</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Group List</li>
+                </ol>
+              </nav> 
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="page-content-card">
+                        <h3 class="mx-auto">Group  List</h3>
+
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Username</th>
+                                <th scope="col">FirstName</th>
+                                <th scope="col">LastName</th>
+                                <th scope="col">EmailId</th>
+                                <th scope="col">Password</th>
+                                <th scope="col">Password</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">ShivaCp123</th>
+                                <td>Shiva</td>
+                                <td>Jadhav</td>
+                                <td>Shiva@gmail.com</td>
+                                <td>Spiderman@123</td>
+                                <td>Lorm Ipsum</td>
+                                <td>
+                                    <div class="dropdown">
+                                      <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="bx bx-dots-horizontal-rounded" data-toggle="tooltip" data-placement="top"
+                                              title="Actions"></i>
+                                          </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <a class="dropdown-item" href="#"><i class="bx bxs-pencil mr-2"></i>View Profile</a>
+                                        <a class="dropdown-item text-danger" href="#"><i class="bx bxs-trash mr-2"></i> Delete</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                
+                              </tr>
+                             </tbody>
+                          </table>
+                     </div>
+                  </div>
+               </div>
+             
+              
+            </div>
+         </main>
+         <!-- page-content" -->
+      </div>
+      <!-- page-wrapper -->
+      <!-- partial -->
+     
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script><script  src="./js/script.js"></script>
+   </body>
+</html>

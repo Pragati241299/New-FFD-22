@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <title>FFDispatch</title>
+      <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css'>
+      <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+      <link rel="stylesheet" href="./style/style.css">
+      <link rel='stylesheet' href='https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css'>
+      <link rel='stylesheet' href='https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css'>
+      <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css'>
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <style>
+         .user-top-btn select{
+         height: 40px;
+         }
+         label{
+         margin-bottom: 0;
+         }
+         .form-body {
+    padding: 0px 41px;
+}
+      </style>
+   </head>
+   <body>
+     <!-- Sidebar -->
+     <div class="page-wrapper chiller-theme toggled">
+      <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class="fas fa-bars"></i>
+      </a>
+      <nav id="sidebar" class="sidebar-wrapper">
+         <div class="sidebar-content">
+            <div class="sidebar-brand">
+               <div id="close-sidebar">
+                  <i class="fas fa-times"></i>
+               </div>
+            </div>
+            <div class="sidebar-header">
+               <div class="user-pic">
+                  <img class="img-responsive img-rounded" src="img/profile.svg"
+                     alt="User picture">
+               </div>
+               <div class="user-info">
+                  <span class="user-name">Jhon
+                  <strong>Smith</strong>
+                  </span>
+                  <span class="user-role">Administrator</span>
+               </div>
+            </div>
+            <!-- sidebar-header  -->
+            <!-- sidebar-search  -->
+            <div class="sidebar-menu">
+               <ul>
+                  <li class="header-menu">
+                     <span>HOME</span>
+                  </li>
+                  <li >
+                     <a href="index.html">
+                     <i class="fa fa-home" aria-hidden="true"></i>
+                     <span>Dashboard</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="product.html">
+                        <i class="fa fa-life-ring" ></i>
+                     <span>Product</span>
+                     </a>
+                     <!-- <div class="sidebar-submenu">
+                        <ul>
+                          <li>
+                            <a href="#">Products
+                        
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">Orders</a>
+                          </li>
+                          <li>
+                            <a href="#">Credit cart</a>
+                          </li>
+                        </ul>
+                        </div> -->
+                  </li>
+                  <li>
+                     <a href="order.html">
+                     <i class="fa fa-shopping-cart"></i>
+                     <span>Orders</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                     <i class="fa fa-truck" aria-hidden="true"></i>
+                     <span>Shipment</span>
+                     </a>
+                  </li>
+                  <li class="header-menu">
+                     <span>MANAGEMENT</span>
+                  </li>
+                  <li class="sidebar-dropdown">
+                     <a href="#">
+                     <i class="fa fa-cog"></i>
+                     <span>Settings</span>
+                     </a>
+                      <div class="sidebar-submenu">
+                        <ul>
+                           <li>
+                              <a href="user-list.html">
+                             <i class="ri-user-line"></i>
+                              <span>Users</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="location.html">
+                                 <i class="ri-map-pin-line"></i>
+                              <span>Locations</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="drivers.html">
+                                 <i class="ri-steering-line"></i>
+                              <span>Drivers</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                                 <i class="ri-account-box-line"></i>
+                              <span>Accounting</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                                 <i class="ri-printer-line"></i>
+                              <span>Integration</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                                 <i class="ri-creative-commons-zero-line"></i>
+                              <span>Branding</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li >
+                     <a href="customer.html">
+                     <i class="fa fa-users" aria-hidden="true"></i>
+                     <span>Customers</span>
+                     </a>
+                  </li>
+                  <li class="header-menu">
+                     <span>SUPPORT</span>
+                  </li>
+                  <li>
+                     <a href="#">
+                     <i class="fa fa-phone" aria-hidden="true"></i>
+                     <span>Contact</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <!-- sidebar-menu  -->
+         </div>
+         <!-- sidebar-content  -->
+         <div class="sidebar-footer py-2">
+            <a href="#">
+            <span>Logout</span>
+            </a>
+            <a href="login.html">
+            <i class="fa fa-power-off"></i>
+            </a>
+         </div>
+      </nav>
+      <!-- sidebar-wrapper  -->
+      <!-- sidebar-wrapper  -->
+      <!--header-->
+      <header class="header py-3">
+         <a href="index.html"><img class="mx-auto d-flex justify-content-center" src="img/logo.png" alt="main-logo"></a> 
+      </header>
+      <main class="page-content">
+         <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="product.html">Group</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Add new group</li>
+            </ol>
+          </nav>       
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="page-content-card">
+                     <div class="tabbar-content">
+                        <div>
+                           <!-- START TABS DIV -->
+                
+                           <div class="col-md-12">
+                            <h2 class="text-left mb-sm-4 m-3"><i class="fa fa-user-plus add"></i> &nbsp;&nbsp;&nbsp;Add New User</h2>
+                             <div class="page-content-card">
+                               <h5 class="add-new-user-text mt-3">Please fill the required fields below</h5>
+                               <div class="input-boxes">
+                                <form action="" >
+                                    <div class="input-box-row-one d-flex">
+                                     <div class="form-group  mt-5">
+                                        <label for="">User Name</label>
+                                        <input type="email" class="form-control"  placeholder="">
+                                        
+                                      </div>
+                                      <div class="form-group  mt-5 mx-5">
+                                        <label for="">First Name</label>
+                                        <input type="email" class="form-control"  placeholder="">
+                                        
+                                      </div>
+                                      <div class="form-group  mt-5">
+                                        <label for="">Last Name</label>
+                                        <input type="email" class="form-control"  placeholder="">
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="input-box-row-two d-flex">
+                                        <div class="form-group  mt-5">
+                                            <label for="">Email Id</label>
+                                            <input type="email" class="form-control"  placeholder="">
+                                            
+                                          </div>
+                                          <div class="form-group  mt-5 mx-5">
+                                            <label for="">Password</label>
+                                            <input type="email" class="form-control"  placeholder="">
+                                            <small id="emailHelp" class="form-text text-muted">Password should contain Alphabets, Numbers and Special charaters</small>
+                                            
+                                          </div>
+                                    </div>
+                                    <div class="form-group  mt-5">
+                                        <label for="">Group</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                          <option>Lorem Ipsum</option>
+                                          <option>Lorem Ipsum</option>
+                                          <option>Lorem Ipsum</option>
+                                          <option>Lorem Ipsum</option>
+                                          <option>Lorem Ipsum</option>
+                                        </select>
+                                      </div>
+                                      <div class="button">
+                                        <button class="add_user_button  float-right "><i class="fa fa-user-plus add"></i>&nbsp;&nbsp;&nbsp;ADD NEW USER</button>
+                                    
+                                    </div>
+                                </form>
+                               </div>
+                          </div>
+                       </div>
+                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+      </main>
+      <!-- page-content" -->
+        <!--start modal1-->
+        <div id="BarcodeModal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="row">
+                        <!--start mainLog-->
+                        <div class="col-md-12 text-center mx-auto" id="secLogin">
+                            <h4 class="titModal">Add New barcode</h4>
+                            <form class="forma form-body text-left">
+                                <div class="form-group to-mid mx-auto">
+                                    <label class="text-left ">Enter new barcode here</label>
+                                    <input type="email " class="form-control " placeholder=" " required=" ">
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="product-top-btn bar-butt "><a href="# ">Add Barcode</a></button>
+                                    <button class="d-block cancel d-flex justify-content-center "><a href="# "></a>cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end Modal1-->
+
+        <!--start modal2-->
+        <div id="EditBarcodeModal " class="modal fade " role="dialog " aria-hidden="true " style="display: none; ">
+            <div class="modal-dialog ">
+                <!-- Modal content-->
+                <div class="modal-content ">
+                    <div class="row ">
+                        <!--start mainLog-->
+                        <div class="col-md-12 text-center mx-auto" id="secLogin ">
+                            <h4 class="titModal ">Edit Barcode</h4>
+                            <div class="text-center py-3">
+                                <div class="form-group ">
+                                    <label class="text-left ">Edit your barcode here</label>
+                                    <input type="email " class="form-control " placeholder=" " required=" ">
+                                </div>
+                                <div class="form-group ">
+                                    <button class="product-top-btn bar-butt "><a href="# ">Save Changes</a></button>
+                                    <button class="d-block cancel d-flex justify-content-center "><a href="# "></a>cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end Modal2-->
+          <!--start modal-->
+          <div id="AddLocationModal" class="modal fade" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="row">
+                        <!--start mainLog-->
+                        <div class="col-md-12 text-center" id="secLogin">
+                            <h4 class="titModal">Add New Location</h4>
+                            <form class="form-body forma text-left">
+                                <div class="d-flex">
+                                    <div class="form-row w-100">
+                                        <div class="form-group">
+                                            <label for="text">Warehouse</label>
+                                            <select>
+                                            <option>Lorem Ipsum</option>
+                                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-row w-100">
+                                        <div class="form-group">
+                                            <label for="password">Bin Location</label>
+                                            <input type="text" name="name" id="location">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button class="product-top-btn bar-butt loc-butt"><a href="#" >Add Location</a></button>
+                                    <button class="d-block cancel"><a href="#"></a>cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end Modal-->
+      </div>
+      <!-- page-wrapper -->
+      <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js'></script>
+      <script src='https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js'></script>
+      <script src='https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js'></script><script  src="./script.js"></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/esm/popper.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.js'></script><script  src="./js/script.js"></script>
+   </body>
+</html>

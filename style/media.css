@@ -1,0 +1,99 @@
+@media (max-width: 767px)
+{
+    .form-signin .text-muted
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .signup
+    {
+        width: 100%;
+    }
+   
+.login .col-md-6
+    {
+        padding: 20px;
+    }
+    .form-signin .h3
+    {
+        font-size:28px;
+    }
+        .form-signin .text-muted
+    {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .colorside p
+    {
+        height: auto;
+    }
+
+    .colorside .logoo img 
+    {
+        width: 100%;
+    }
+    
+    .form-signin p
+    {
+        padding-bottom:0;
+    }
+    .signup .form-signin
+    {
+      padding: 30px 30px;
+    }
+}
+/*Small screen */
+@media (min-width: 768px) and (max-width:991px)
+{
+
+    .form-signin .text-muted
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .signup
+    {
+        width: 100%;
+    }
+
+    .login .col-md-6
+    {
+        padding: 35px;
+    }
+
+    .colorside p
+    {
+        height: auto;
+    }
+}
+/*Medium Screen */
+@media (min-width: 992px) and (max-width:1199px)
+{
+    .form-signin .text-muted
+    {
+        width: 100%;
+        height: auto;
+    }
+
+    .signup
+    {
+        width: 100%;
+    }
+}
+@media (width: 320px)
+{
+
+}
+@media (width: 768px) 
+{
+
+}
+@media (width: 1024px) 
+{
+
+}
+@media (width: 1083px)
+{}
